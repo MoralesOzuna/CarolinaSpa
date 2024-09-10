@@ -1,0 +1,45 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.sociales{
+    margin-top: 5rem 0;
+
+    @include m.tablet{
+        margin-top: 0;
+    }
+
+    &__enlace{
+
+        &::before{
+            content: '';
+            padding: 2rem;
+            display: inline-block;
+          
+        }
+        &[href *= "facebook.com"]::before{ /* *=Busca el contenido dentro del hrf que en algun tengo facebook.com */
+            background-image: url(../img/icono_facebook.svg);
+        }
+
+        &[href *= "twitter.com"]::before{ /* *=Busca el contenido dentro del hrf que en algun tengo facebook.com */
+            background-image: url(../img/icono_twitter.svg);
+        }
+
+        &[href *= "instagram.com"]::before{ /* *=Busca el contenido dentro del hrf que en algun tengo facebook.com */
+            background-image: url(../img/icono_instagram.svg);
+        }
+
+        &[href *= "youtube.com"]::before{ /* *=Busca el contenido dentro del hrf que en algun tengo facebook.com */
+            background-image: url(../img/icono_youtube.svg);
+        }
+
+        &[href *= "tiktok.com"]::before{ /* *=Busca el contenido dentro del hrf que en algun tengo facebook.com */
+            background-image: url(../img/icono_tiktok.svg);
+        }
+    }
+
+    &__accesible{
+        visibility: hidden;
+    }
+}
+
